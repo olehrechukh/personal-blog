@@ -12,7 +12,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git://github.com/11ty/eleventy-base-blog.git"
+		"url": "https://github.com/olehrechukh/personal-blog"
 	},
 	"author": {
 		"name": "Oleh Hrechukh",
