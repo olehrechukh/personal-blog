@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:base="en">
+	<title>Oleh Hrechukh&#39;s blog</title>
+	<subtitle>I am writing about my experiences as a naval navel-gazer.</subtitle>
+	<link href="https://github.com/eleventy-base-blog/feed/feed.xml" rel="self"/>
+	<link href="https://github.com/eleventy-base-blog/olehrechukh/"/>
+	<updated>2024-07-31T00:00:00Z</updated>
+	<id>https://github.com/olehrechukh/</id>
+	<author>
+		<name>Oleh Hrechukh</name>
+		<email>oleh.hrechukh@gmail.com</email>
+	</author>
+	
+	<entry>
+		<title>Number sums solver.</title>
+		<link href="https://github.com/eleventy-base-blog/blog/firstpost/"/>
+		<updated>2024-07-31T00:00:00Z</updated>
+		<id>https://github.com/eleventy-base-blog/blog/firstpost/</id>
+		<content type="html">&lt;h1 id=&quot;solving-mobile-game-number-sums-an-algorithmic-approach&quot; tabindex=&quot;-1&quot;&gt;Solving Mobile Game Number-Sums: An Algorithmic Approach &lt;a class=&quot;header-anchor&quot; href=&quot;https://github.com/eleventy-base-blog/blog/firstpost/&quot;&gt;#&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;Mobile games that involve number-sums puzzles require players to manipulate grid values to match specified row and column sums. This article describes the algorithms implemented to solve such puzzles effectively.&lt;/p&gt;
+&lt;h2 id=&quot;overview-of-gridmodel&quot; tabindex=&quot;-1&quot;&gt;Overview of GridModel &lt;a class=&quot;header-anchor&quot; href=&quot;https://github.com/eleventy-base-blog/blog/firstpost/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;The &lt;code&gt;GridModel&lt;/code&gt; represents the puzzle grid, including the row and column sums that need to be satisfied. Each cell in the grid can have various states: hidden, solved, or neither. The main goal is to adjust the values in the grid so that the sum of each row and column matches the given targets.&lt;/p&gt;
+&lt;h2 id=&quot;algorithm-descriptions&quot; tabindex=&quot;-1&quot;&gt;Algorithm Descriptions &lt;a class=&quot;header-anchor&quot; href=&quot;https://github.com/eleventy-base-blog/blog/firstpost/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id=&quot;1-hiding-higher-values&quot; tabindex=&quot;-1&quot;&gt;1. Hiding Higher Values &lt;a class=&quot;header-anchor&quot; href=&quot;https://github.com/eleventy-base-blog/blog/firstpost/&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;The first step in solving the puzzle involves hiding values that are higher than their corresponding row or column sums. This is because such values can never contribute to a valid solution. By eliminating these values early on, the complexity of the puzzle is reduced, making subsequent steps more manageable.&lt;/p&gt;
+&lt;h3 id=&quot;2-hiding-redundant-values&quot; tabindex=&quot;-1&quot;&gt;2. Hiding Redundant Values &lt;a class=&quot;header-anchor&quot; href=&quot;https://github.com/eleventy-base-blog/blog/firstpost/&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;After hiding the higher values, the next step is to hide redundant values in rows and columns. Redundant values are those that cannot possibly contribute to achieving the target sums based on all possible combinations of the remaining values. By removing these redundant values, the search space is further reduced, making it easier to identify the correct values.&lt;/p&gt;
+&lt;h3 id=&quot;3-solving-sum-values&quot; tabindex=&quot;-1&quot;&gt;3. Solving Sum Values &lt;a class=&quot;header-anchor&quot; href=&quot;https://github.com/eleventy-base-blog/blog/firstpost/&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Once the higher and redundant values are hidden, the algorithm focuses on solving rows or columns where the sum of the visible values matches the target sums. When the sum of the remaining values in a row or column equals the target, those values are marked as solved. This step ensures that the values contributing to the target sums are identified and fixed, progressing towards the final solution.&lt;/p&gt;
+&lt;h3 id=&quot;4-solving-unique-sum-values&quot; tabindex=&quot;-1&quot;&gt;4. Solving Unique Sum Values &lt;a class=&quot;header-anchor&quot; href=&quot;https://github.com/eleventy-base-blog/blog/firstpost/&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;The final step involves identifying and solving unique values that satisfy the row or column sums. This step looks for combinations of values that uniquely satisfy the target sums, ensuring that each row and column sum is met precisely. This is done by analyzing all possible combinations of the remaining values and finding those that match the target sums. Unique values that meet the criteria are marked as solved.&lt;/p&gt;
+&lt;h2 id=&quot;algorithm-execution&quot; tabindex=&quot;-1&quot;&gt;Algorithm Execution &lt;a class=&quot;header-anchor&quot; href=&quot;https://github.com/eleventy-base-blog/blog/firstpost/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;The algorithms are executed in a loop, applying each step iteratively until the puzzle is solved or no further modifications can be made. This iterative approach ensures that all possible reductions and solutions are explored, leading to the final solution.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Initialization&lt;/strong&gt;: The grid model is initialized with the given values and sums.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Iteration&lt;/strong&gt;: Each algorithm (hiding higher values, hiding redundant values, solving sum values, and solving unique sum values) is applied in sequence.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Modification Check&lt;/strong&gt;: After each algorithm is applied, the grid is checked for modifications. If modifications are made, the process repeats.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Termination&lt;/strong&gt;: The process terminates when the grid is solved (i.e., all row and column sums are zero, and all cells are either hidden or solved) or no further modifications can be made.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;By following these steps, the algorithms systematically reduce the complexity of the puzzle and find the solution efficiently.&lt;/p&gt;
+&lt;h2 id=&quot;conclusion&quot; tabindex=&quot;-1&quot;&gt;Conclusion &lt;a class=&quot;header-anchor&quot; href=&quot;https://github.com/eleventy-base-blog/blog/firstpost/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;The described algorithms provide a structured approach to solving number-sums puzzles in mobile games. By progressively hiding impossible and redundant values and solving unique sums, the algorithms ensure an efficient and systematic solution. This approach not only simplifies the puzzle-solving process but also enhances the player&#39;s experience by providing clear and logical steps towards the solution.&lt;/p&gt;
+</content>
+	</entry>
+</feed>
