@@ -35,13 +35,12 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-          cache: 'yarn'
 
       - name: Install dependencies          
-        run: yarn install
+        run: npm install
 
       - name: Build  
-        run: yarn build-ghpages
+        run: npm run build-ghpages
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
