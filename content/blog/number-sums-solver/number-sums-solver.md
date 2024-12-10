@@ -6,9 +6,11 @@ tags:
   - gaming
 ---
 
-# Solving Mobile Game Number-Sums: An Algorithmic Approach
+# Solving Mobile Game Number-Sums: An Algorithmic Approach with vizualization
 
-Mobile games that involve number-sums puzzles require players to manipulate grid values to match specified row and column sums. This article describes the algorithms implemented to solve such puzzles effectively.
+## Introduction
+
+In the realm of mobile gaming, number-sums puzzles present an intriguing challenge, requiring players to manipulate grid values to achieve specified row and column sums. These puzzles not only test logical thinking but also offer a rewarding sense of accomplishment when solved. This article delves into the algorithms designed to tackle these puzzles effectively, ensuring a seamless and enjoyable gaming experience.
 
 ## Overview of GridModel
 
