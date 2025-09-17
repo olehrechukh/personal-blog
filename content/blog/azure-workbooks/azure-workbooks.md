@@ -28,7 +28,7 @@ This workflow is designed to be a continuous loop, allowing you to evolve your w
 3.  **Capture Your Content as Code**: After you have designed your content in the UI, you will export the updated workbook definition as a JSON payload and use it to update your Terraform configuration. This captures the state of your workbook's content as code and allows you to redeploy it consistently across all your environments.
 
 <figure>
-  {% image "./data/visualizations.png", "Visualizations" %}
+  {% image "./data/visualizations.png", "Sample workbook visualizations showing combined charts and metrics used in the demo workbook" %}
 </figure>
 
 ## A Deep Dive into the Workflow
@@ -121,7 +121,7 @@ We will discuss a using `templatefile` [later](#understanding-the-templatefile-f
 Now that you have an empty workbook, you can navigate to it in the Azure portal and start designing your content. For example, you can add a new chart that visualizes the number of storage account transactions by API name, helping you monitor which operations, such as retrieving blob properties or deleting containers, are being used most frequently.
 
 <figure>
-  {% image "./data/new-chart.png", "New chart" %}
+  {% image "./data/new-chart.png", "Example metric chart: transactions by API name for a storage account" %}
 </figure>
 
 Do not save manually; it is not recommended, as Terraform will override it.
@@ -131,7 +131,7 @@ Do not save manually; it is not recommended, as Terraform will override it.
 Once you have ended your chart, you need to export the updated JSON definition. To do this, click on the "</>" button (Advanced Editor) in the workbook's toolbar. This will open the JSON editor with the new, updated payload. Copy the entire JSON content to your clipboard.
 
 <figure>
-  {% image "./data/advanced-editor.png", "New chart" %}
+  {% image "./data/advanced-editor.png", "Workbook Advanced Editor view for exporting or editing the workbook JSON" %}
 </figure>
 
 ### 4. Updating the Terraform Configuration
@@ -224,7 +224,7 @@ terraform apply
 Bingo, it works.
 
 <figure>
-  {% image "./data/final.png", "Final" %}
+  {% image "./data/final.png", "Final deployed workbook UI after applying the exported JSON via Terraform" %}
 </figure>
 
 ### 5. The Iterative Loop
