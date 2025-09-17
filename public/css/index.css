@@ -53,7 +53,7 @@ html {
 	overflow-y: scroll;
 }
 body {
-	max-width: 40em;
+	max-width: 80em;
 }
 
 /* https://www.a11yproject.com/posts/how-to-hide-content/ */
@@ -117,6 +117,26 @@ table {
 table td,
 table th {
 	padding-right: 1em;
+}
+
+/* Centered figures with captions */
+figure {
+	display: block;
+	margin: 1.25rem auto;
+	max-width: 70%;
+	text-align: center;
+}
+figure img {
+	display: block;
+	margin: 0 auto;
+	width: 100%;
+	height: auto;
+}
+figcaption {
+	margin-top: 0.5rem;
+	font-size: 0.9rem;
+	color: var(--color-gray-90);
+	opacity: 0.9;
 }
 
 pre,
