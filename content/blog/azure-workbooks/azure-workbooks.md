@@ -1,6 +1,6 @@
 ---
 title: Automation azure workbook with terraform IAC!
-description: Learn how to manage Azure Workbooks as code using Terraform: create an empty workbook, design in the portal, export JSON, and reapply via IaC for repeatable deployments.
+description: Learn how to manage Azure Workbooks as code using Terraform. Create an empty workbook, design in the portal, export JSON, and reapply via IaC for repeatable deployments.
 date: 2025-09-16
 tags: [Azure, Terraform, Workbooks, IaC, Monitoring, "Log Analytics"]
 ---
