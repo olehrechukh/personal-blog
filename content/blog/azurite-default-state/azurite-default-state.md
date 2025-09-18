@@ -82,6 +82,8 @@ docker-compose down
 
 This is the cleanest and most recommended approach.
 
+You can find the complete docker-compose.yml and initialization scripts in this [GitHub repository](https://github.com/olehrechukh/azurite-container)
+
 ### Method 2: Under the Hood with `docker run`
 
 Understanding what Docker Compose does behind the scenes is valuable. Here’s how to achieve the same setup using `docker run` commands.
